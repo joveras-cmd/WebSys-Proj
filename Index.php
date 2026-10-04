@@ -54,8 +54,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $ext = strtolower(pathinfo($f['name'], PATHINFO_EXTENSION));
         if (!in_array($ext, ['jpg', 'jpeg', 'png'], true)) {
             $errors[] = 'Receipt must be a JPG or PNG.';
-        } elseif ($f['size'] > 2 * 1024 * 1024) {
-            $errors[] = 'Receipt must be 2 MB or smaller.';
+        } elseif ($f['size'] > 5 * 1024 * 1024) {
+            $errors[] = 'Receipt must be 5 MB or smaller.';
         } elseif (getimagesize($f['tmp_name']) === false) {
             $errors[] = 'Receipt is not a real image.';
         }

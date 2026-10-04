@@ -109,7 +109,7 @@
      <?php endfor; ?>
     </select></div>
   </div>
-  <label for="receipt">Payment receipt (JPG/PNG, max 2 MB)</label>
+  <label for="receipt">Payment receipt (JPG/PNG, max 5 MB)</label>
   <input type="file" id="receipt" name="receipt" accept=".jpg,.jpeg,.png">
   <button type="submit">Reserve</button>
  </form>
