@@ -111,15 +111,81 @@ function old(string $k): string { global $old; return e((string)($old[$k] ?? '')
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Court Reservation</title>
 <style>
- body{font-family:system-ui,sans-serif;max-width:960px;margin:0 auto;padding:16px;color:#1d2433;background:#f6f8fb}
- h1{margin-bottom:4px} section{background:#fff;border-radius:10px;padding:16px;margin:16px 0;box-shadow:0 1px 3px #0001}
- table{width:100%;border-collapse:collapse} th,td{padding:8px;text-align:left;border-bottom:1px solid #e5e9f0}
- tr.even{background:#f3f6fb} .free{color:#0a7d3b} .taken{color:#b42318}
- .err{background:#fde8e8;color:#8a1c1c;padding:10px;border-radius:6px} .ok{background:#e3f6ea;color:#14532d;padding:10px;border-radius:6px}
- label{display:block;margin:10px 0 4px;font-weight:600} input,select{padding:8px;width:100%;box-sizing:border-box}
- .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0 16px}
- button{margin-top:14px;padding:10px 18px;background:#1d4ed8;color:#fff;border:0;border-radius:6px;cursor:pointer}
- .slots span{display:inline-block;margin:2px 4px 2px 0;padding:2px 6px;border-radius:4px;background:#eef2f7;font-size:.85rem}
+ body{
+    font-family:system-ui,sans-serif;
+    max-width:960px;
+    margin:0 auto;
+    padding:16px;
+    color:#1d2433;
+    background:#F5EDEB}
+ 
+ h1{margin-bottom:4px} 
+ section{
+        background:#E3E3E3;
+        border-radius:10px;
+        padding:16px;
+        margin:16px 0;
+        box-shadow:0 1px 3px #0001}
+
+ table{
+        width:100%;
+        border-collapse:collapse} 
+ 
+ th,td{
+        padding:8px;
+        text-align:left;
+        border-bottom:1px solid #e5e9f0}
+
+ tr.even{background:#f3f6fb} 
+
+ .free{color:#0a7d3b} 
+
+ .taken{color:#b42318}
+
+ .err{
+        background:#fde8e8;
+        color:#8a1c1c;
+        padding:10px;
+        border-radius:6px}
+
+.ok{
+        background:#e3f6ea;
+        color:#14532d;
+        padding:10px;
+        border-radius:6px}
+        
+ label{
+        display:block;
+        margin:10px 0 4px;
+        font-weight:600} 
+        
+        input,select{
+            padding:8px;
+            width:100%;
+            box-sizing:border-box}
+
+ .grid{
+        display:grid;   
+        grid-template-columns:repeat(auto-fit,minmax(200px,1fr));g
+        ap:0 16px}
+
+ button{
+        margin-top:14px;
+        padding:10px 18px;
+        background:#1d4ed8;
+        color:#fff;
+        border:0;
+        border-radius:6px;
+        cursor:pointer}
+
+ .slots span{
+        display:inline-block;
+        margin:2px 4px 2px 0;
+        padding:2px 6px;
+        border-radius:4px;
+        background:#eef2f7;
+        font-size:.85rem}
+
 </style>
 </head>
 <body>
