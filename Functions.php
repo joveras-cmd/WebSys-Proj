@@ -1,23 +1,14 @@
 <?php
 declare(strict_types=1);
 
-// Week 8: XSS protection helper
+// ===== SECURITY (Week 8) =====
+// XSS protection helper
 function e(string $s): string
 {
     return htmlspecialchars($s, ENT_QUOTES, 'UTF-8');
 }
 
-// Week 7: multidimensional associative array (court catalog)
-function get_courts(): array
-{
-    return [
-        1 => ['name' => 'Court A', 'sport' => 'Basketball', 'rate' => 350.0, 'open' => 8, 'close' => 22, 'tags' => 'indoor,lights,scoreboard'],
-        2 => ['name' => 'Court B', 'sport' => 'Basketball', 'rate' => 250.0, 'open' => 8, 'close' => 22, 'tags' => 'outdoor,lights'],
-        3 => ['name' => 'Court C', 'sport' => 'Badminton',  'rate' => 200.0, 'open' => 8, 'close' => 21, 'tags' => 'indoor,wooden floor'],
-        4 => ['name' => 'Court D', 'sport' => 'Tennis',     'rate' => 400.0, 'open' => 7, 'close' => 20, 'tags' => 'outdoor,clay'],
-    ];
-}
-
+// ===== PRICING (Weeks 4 and 5) =====
 // Week 5: multi-way branching with match (peak hours cost more)
 function peak_multiplier(int $hour): float
 {
@@ -60,6 +51,7 @@ function member_tier(int $bookings): string
     }
 }
 
+// ===== AVAILABILITY (Weeks 6 and 7) =====
 function booked_hours(array $bookings, int $court, string $date): array
 {
     $taken = [];
@@ -84,6 +76,7 @@ function is_available(array $bookings, int $court, string $date, int $start, int
     return true;
 }
 
+// ===== HELPERS (Week 7) =====
 // Week 7: pass-by-reference (&) to add a booking to the list
 function add_booking(array &$bookings, array $booking): void
 {
